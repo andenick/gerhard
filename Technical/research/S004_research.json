@@ -1,0 +1,46 @@
+{
+  "series_id": "S004",
+  "series_name": "Disaggregated Debt Panel",
+  "module": "public_debt",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://data.worldbank.org/indicator",
+      "source": "World Bank WDI"
+    },
+    {
+      "type": "module_methodology",
+      "text": "Debt sustainability analysis follows the standard debt dynamics equation: d(debt/GDP) = (r-g)(debt/GDP) - primary_balance/GDP. Debt early warning uses Random Forest on historical crisis episodes (AUC=0.99).",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "World Bank WDI",
+      "url": "https://data.worldbank.org/indicator",
+      "access_method": "API",
+      "coverage": "global_163",
+      "period": "1972-2024"
+    }
+  ],
+  "data_columns": [
+    "S004-A",
+    "S004-B",
+    "S004-C",
+    "S004-D"
+  ],
+  "construction": "direct",
+  "units": "percent_gdp",
+  "methodology_summary": "Disaggregated Debt Panel: Public debt disaggregated by instrument type from World Bank WDI. Source: World Bank WDI. Construction: direct. Coverage: global_163, 1972-2024.",
+  "citations": [
+    {
+      "author": "World Bank",
+      "title": "World Bank WDI",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator"
+    }
+  ],
+  "cross_references": [],
+  "notes": ""
+}

@@ -1,0 +1,61 @@
+{
+  "series_id": "S008",
+  "series_name": "Expenditure Composition Panel",
+  "module": "expenditure",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://data.worldbank.org/indicator",
+      "source": "World Bank WDI"
+    },
+    {
+      "type": "module_methodology",
+      "text": "Government expenditure analysis uses both economic classification (compensation, goods/services, interest, transfers) and functional classification (COFOG). COFOG data available for EU countries via Eurostat.",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "World Bank WDI",
+      "url": "https://data.worldbank.org/indicator",
+      "access_method": "API",
+      "coverage": "global",
+      "period": "1972-2024"
+    }
+  ],
+  "data_columns": [
+    "S008-A",
+    "S008-B",
+    "S008-C",
+    "S008-D",
+    "S008-E",
+    "S008-F",
+    "S008-G",
+    "S008-H",
+    "S008-I",
+    "S008-J",
+    "S008-K",
+    "S008-L",
+    "S008-M",
+    "S008-N",
+    "S008-O",
+    "S008-P",
+    "S008-Q",
+    "S008-R",
+    "S008-S"
+  ],
+  "construction": "direct",
+  "units": "percent_gdp",
+  "methodology_summary": "Expenditure Composition Panel: Government expenditure decomposed by economic classification. Source: World Bank WDI. Construction: direct. Coverage: global, 1972-2024.",
+  "citations": [
+    {
+      "author": "World Bank",
+      "title": "World Bank WDI",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator"
+    }
+  ],
+  "cross_references": [],
+  "notes": ""
+}

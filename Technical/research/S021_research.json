@@ -1,0 +1,51 @@
+{
+  "series_id": "S021",
+  "series_name": "IMF WEO Panel",
+  "module": "global_comparative",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://www.imf.org/en/Publications/WEO",
+      "source": "IMF World Economic Outlook"
+    },
+    {
+      "type": "module_methodology",
+      "text": "Cross-country comparative analysis uses panel econometric methods: fixed effects, structural breaks (Bai-Perron), convergence tests, cluster analysis (4 fiscal archetypes), and Granger causality.",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "IMF World Economic Outlook",
+      "url": "https://www.imf.org/en/Publications/WEO",
+      "access_method": "API",
+      "coverage": "global_221",
+      "period": "1980-2029"
+    }
+  ],
+  "data_columns": [
+    "S021-A",
+    "S021-B",
+    "S021-C",
+    "S021-D",
+    "S021-E",
+    "S021-F",
+    "S021-G",
+    "S021-H",
+    "S021-I"
+  ],
+  "construction": "direct",
+  "units": "mixed",
+  "methodology_summary": "IMF WEO Panel: IMF World Economic Outlook macroeconomic indicators and forecasts. Source: IMF World Economic Outlook. Construction: direct. Coverage: global_221, 1980-2029.",
+  "citations": [
+    {
+      "author": "International Monetary Fund",
+      "title": "IMF World Economic Outlook",
+      "year": 2024,
+      "url": "https://www.imf.org/en/Publications/WEO"
+    }
+  ],
+  "cross_references": [],
+  "notes": ""
+}

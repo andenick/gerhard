@@ -1,0 +1,72 @@
+{
+  "series_id": "S006",
+  "series_name": "Master Fiscal Panel",
+  "module": "tax_revenue",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://data.worldbank.org",
+      "source": "Composite (WDI tax, expenditure, debt, GDP)"
+    },
+    {
+      "type": "module_methodology",
+      "text": "Tax revenue analysis follows the standard public finance approach: revenue-to-GDP ratios enable cross-country comparison by normalizing for economic size. The World Bank's GC.TAX.TOTL.GD.ZS is the most widely used cross-country tax indicator.",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "Composite (WDI tax, expenditure, debt, GDP)",
+      "url": "https://data.worldbank.org",
+      "access_method": "API",
+      "coverage": "global_238",
+      "period": "1972-2024"
+    }
+  ],
+  "data_columns": [
+    "S006-A",
+    "S006-B",
+    "S006-C",
+    "S006-D",
+    "S006-E",
+    "S006-F",
+    "S006-G",
+    "S006-H",
+    "S006-I",
+    "S006-J",
+    "S006-K",
+    "S006-L",
+    "S006-M",
+    "S006-N",
+    "S006-O",
+    "S006-P",
+    "S006-Q",
+    "S006-R",
+    "S006-S",
+    "S006-T",
+    "S006-U",
+    "S006-V",
+    "S006-W",
+    "S006-X",
+    "S006-Y",
+    "S006-Z"
+  ],
+  "construction": "composite",
+  "units": "mixed",
+  "methodology_summary": "Master Fiscal Panel: Unified fiscal panel merging tax + expenditure + debt + GDP (29 columns). Source: Composite (WDI tax, expenditure, debt, GDP). Construction: composite. Coverage: global_238, 1972-2024.",
+  "citations": [
+    {
+      "author": "Multiple sources (World Bank WDI)",
+      "title": "Composite (WDI tax, expenditure, debt, GDP)",
+      "year": 2024,
+      "url": "https://data.worldbank.org"
+    }
+  ],
+  "cross_references": [
+    "S005",
+    "S003",
+    "S004"
+  ],
+  "notes": ""
+}

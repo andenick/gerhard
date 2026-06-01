@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Data Catalog &amp; Downloads — {{ site_title }}{% endblock %}
+{% macro rows(d) %}
+  {% for key, e in d.items() %}
+  <tr>
+    <td><strong>{{ key }}</strong></td>
+    <td>{{ e.name }}</td>
+    <td>{{ e.module or "" }}</td>
+    <td>{{ e.rows or "" }}{% if e.year_range %} · {{ e.year_range[0] }}–{{ e.year_range[1] }}{% endif %}</td>
+    <td>
+      {% if e.freshness and e.freshness.live %}<span class="badge live">live · {{ e.freshness.adapter }}</span>{% endif %}
+      {% if e.status == "pending_build" %}<span class="badge pending">pending</span>{% endif %}
+    </td>
+    <td>
+      {% if e.downloads %}<span class="dl-btns">
+        <a href="{{ e.downloads.csv }}">CSV</a><a href="{{ e.downloads.xlsx }}">XLSX</a>
+        <a href="{{ e.downloads.json }}">JSON</a><a href="{{ e.downloads.parquet }}">Parquet</a>
+      </span>{% else %}<span style="color:#aaa">—</span>{% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+{% endmacro %}
+{% block body %}
+<main class="content">
+  <div class="container">
+    <h1>Data Catalog &amp; Downloads</h1>
+    <p class="prose">Every dataset behind this site, with provenance and one-click downloads.
+      Series marked <span class="badge live">live</span> refresh automatically from their source API.
+      See <a href="/methodology">methodology</a> for sources and limitations.</p>
+    <h2>Fiscal data series (Anu)</h2>
+    <table class="grid"><thead><tr><th>ID</th><th>Name</th><th>Module</th><th>Coverage</th><th>Status</th><th>Download</th></tr></thead>
+      <tbody>{{ rows(series) }}</tbody></table>
+    <h2 style="margin-top:40px">U.S. history datasets</h2>
+    <table class="grid"><thead><tr><th>ID</th><th>Name</th><th>Module</th><th>Coverage</th><th>Status</th><th>Download</th></tr></thead>
+      <tbody>{{ rows(us_history) }}</tbody></table>
+    <h2 style="margin-top:40px">Treasury &amp; duration datasets</h2>
+    <table class="grid"><thead><tr><th>ID</th><th>Name</th><th>Module</th><th>Coverage</th><th>Status</th><th>Download</th></tr></thead>
+      <tbody>{{ rows(treasury) }}</tbody></table>
+  </div>
+</main>
+{% endblock %}

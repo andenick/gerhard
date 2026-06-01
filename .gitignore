@@ -1,0 +1,133 @@
+# ============ Gerhard code-only .gitignore ============
+# --- Data trees (large; outputs/inputs/corpus) ---
+/Inputs/
+/Outputs/
+/Output/
+/Countries/
+/Technical/data/
+/Technical/absorbed/
+/Technical/ANU_REPLICATOR/
+/Technical/archive/
+/Technical/Catalogs/
+/Analysis_Modules/MSPD/
+/Robin/
+/_archive/
+site_data/
+**/site_data/
+**/Output/
+**/Outputs/
+**/data/raw/
+**/data/processed/
+
+# --- Public data folder: ignore contents, ship only the MANIFEST ---
+/data/*
+!/data/
+!/data/MANIFEST.md
+
+# --- Internal docs / process / agent files (never publish) ---
+.claude/
+CLAUDE.md
+**/Handoffs/
+**/HANDOFF_*.md
+**/PROGRESS_LOG.md
+**/DECISION_LOG*.md
+**/*_PLAN.md
+**/*_PLAN_v*.md
+**/*_BRAINSTORM*.md
+**/NEXT_STEPS*.md
+**/*_WISHLIST*.md
+/Technical/PIPELINE_STATE.json
+/Technical/ANU_LEDGER.json
+/Technical/ASSUMPTIONS.md
+/Technical/ARCHIVE_MIGRATION_NOTICE.md
+/Technical/docs/WEBSITE_PLAN.md
+/Technical/docs/KB_STATUS.md
+# Internal preservation/deliverable tooling (depends on private backup store)
+/Technical/src/backup_to_robin.py
+/Technical/src/create_final_deliverables.py
+/Technical/src/experimental/FISCAL_REGIME_NEWS_COLLECTOR_README.md
+
+# --- Env files (allow the example template) ---
+.env
+.env.*
+!.env.example
+
+# --- Data / large binary file types ---
+*.parquet
+*.feather
+*.rdb
+*.rds
+*.sqlite
+*.sqlite3
+*.db
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.gz
+*.xlsx
+*.xls
+*.csv
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.docx
+*.doc
+*.pptx
+*.h5
+*.nc
+*.dta
+
+# --- Caches / build ---
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+.pytest_cache/
+**/.pytest_cache/
+.ipynb_checkpoints/
+*_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+node_modules/
+
+# --- Virtual envs ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Secrets / credentials ---
+*.env
+.env
+.env.*
+api_keys*
+*.key
+*.pem
+credentials*
+secrets*
+*token*
+*.secret
+!.env.example
+
+# --- LaTeX build artifacts ---
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# --- IDE / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.backup_*
+.backup_*

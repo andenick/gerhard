@@ -1,0 +1,57 @@
+{
+  "series_id": "S010",
+  "series_name": "Financial Sector Panel",
+  "module": "global_comparative",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://data.worldbank.org/indicator",
+      "source": "World Bank WDI"
+    },
+    {
+      "type": "module_methodology",
+      "text": "Cross-country comparative analysis uses panel econometric methods: fixed effects, structural breaks (Bai-Perron), convergence tests, cluster analysis (4 fiscal archetypes), and Granger causality.",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "World Bank WDI",
+      "url": "https://data.worldbank.org/indicator",
+      "access_method": "API",
+      "coverage": "global_243",
+      "period": "1972-2024"
+    }
+  ],
+  "data_columns": [
+    "S010-A",
+    "S010-B",
+    "S010-C",
+    "S010-D",
+    "S010-E",
+    "S010-F",
+    "S010-G",
+    "S010-H",
+    "S010-I",
+    "S010-J",
+    "S010-K",
+    "S010-L",
+    "S010-M",
+    "S010-N",
+    "S010-O"
+  ],
+  "construction": "direct",
+  "units": "percent_gdp",
+  "methodology_summary": "Financial Sector Panel: Bank credit, M2, stock market cap, insurance from WDI. Source: World Bank WDI. Construction: direct. Coverage: global_243, 1972-2024.",
+  "citations": [
+    {
+      "author": "World Bank",
+      "title": "World Bank WDI",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator"
+    }
+  ],
+  "cross_references": [],
+  "notes": ""
+}

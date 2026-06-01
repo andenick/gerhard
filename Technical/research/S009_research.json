@@ -1,0 +1,62 @@
+{
+  "series_id": "S009",
+  "series_name": "Balance of Payments Panel",
+  "module": "global_comparative",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://data.worldbank.org/indicator",
+      "source": "World Bank WDI"
+    },
+    {
+      "type": "module_methodology",
+      "text": "Cross-country comparative analysis uses panel econometric methods: fixed effects, structural breaks (Bai-Perron), convergence tests, cluster analysis (4 fiscal archetypes), and Granger causality.",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "World Bank WDI",
+      "url": "https://data.worldbank.org/indicator",
+      "access_method": "API",
+      "coverage": "global",
+      "period": "1972-2024"
+    }
+  ],
+  "data_columns": [
+    "S009-A",
+    "S009-B",
+    "S009-C",
+    "S009-D",
+    "S009-E",
+    "S009-F",
+    "S009-G",
+    "S009-H",
+    "S009-I",
+    "S009-J",
+    "S009-K",
+    "S009-L",
+    "S009-M",
+    "S009-N",
+    "S009-O",
+    "S009-P",
+    "S009-Q",
+    "S009-R",
+    "S009-S",
+    "S009-T"
+  ],
+  "construction": "direct",
+  "units": "mixed (percent_gdp, billions_usd)",
+  "methodology_summary": "Balance of Payments Panel: Current account, financial account, trade balance, FDI from WDI. Source: World Bank WDI. Construction: direct. Coverage: global, 1972-2024.",
+  "citations": [
+    {
+      "author": "World Bank",
+      "title": "World Bank WDI",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator"
+    }
+  ],
+  "cross_references": [],
+  "notes": ""
+}

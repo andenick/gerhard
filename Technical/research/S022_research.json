@@ -1,0 +1,59 @@
+{
+  "series_id": "S022",
+  "series_name": "US Monthly Treasury Statement Panel",
+  "module": "us_treasury",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/",
+      "source": "US Treasury MTS"
+    },
+    {
+      "type": "module_methodology",
+      "text": "US Treasury market analysis covers MSPD (outstanding securities), MTS (monthly flows), yield curves (term structure), auctions (primary market), and monetary aggregates (Fed policy).",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "US Treasury MTS",
+      "url": "https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/",
+      "access_method": "API",
+      "coverage": "US",
+      "period": "1998-2026"
+    }
+  ],
+  "data_columns": [
+    "S022-A",
+    "S022-B",
+    "S022-C",
+    "S022-D",
+    "S022-E",
+    "S022-F",
+    "S022-G",
+    "S022-H",
+    "S022-I",
+    "S022-J",
+    "S022-K",
+    "S022-L",
+    "S022-M",
+    "S022-N",
+    "S022-O",
+    "S022-P",
+    "S022-Q"
+  ],
+  "construction": "direct",
+  "units": "millions_usd",
+  "methodology_summary": "US Monthly Treasury Statement Panel: US federal receipts and outlays by category from Treasury MTS. Source: US Treasury MTS. Construction: direct. Coverage: US, 1998-2026.",
+  "citations": [
+    {
+      "author": "US Department of the Treasury",
+      "title": "US Treasury MTS",
+      "year": 2024,
+      "url": "https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/"
+    }
+  ],
+  "cross_references": [],
+  "notes": ""
+}

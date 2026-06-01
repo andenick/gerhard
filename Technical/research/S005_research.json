@@ -1,0 +1,59 @@
+{
+  "series_id": "S005",
+  "series_name": "Enriched Tax Panel (GDP-integrated)",
+  "module": "tax_revenue",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://data.worldbank.org/indicator",
+      "source": "World Bank WDI GDP"
+    },
+    {
+      "type": "module_methodology",
+      "text": "Tax revenue analysis follows the standard public finance approach: revenue-to-GDP ratios enable cross-country comparison by normalizing for economic size. The World Bank's GC.TAX.TOTL.GD.ZS is the most widely used cross-country tax indicator.",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "World Bank WDI GDP",
+      "url": "https://data.worldbank.org/indicator",
+      "access_method": "API",
+      "coverage": "global_192",
+      "period": "1972-2024"
+    }
+  ],
+  "data_columns": [
+    "S005-A",
+    "S005-B",
+    "S005-C",
+    "S005-D",
+    "S005-E",
+    "S005-F",
+    "S005-G",
+    "S005-H",
+    "S005-I",
+    "S005-J",
+    "S005-K",
+    "S005-L",
+    "S005-M",
+    "S005-N",
+    "S005-O"
+  ],
+  "construction": "formula",
+  "units": "mixed (percent_gdp, usd_per_capita, billions_usd)",
+  "methodology_summary": "Enriched Tax Panel (GDP-integrated): Tax panel enriched with World Bank WDI GDP data for per-capita and level calculations. Source: World Bank WDI GDP. Construction: formula. Coverage: global_192, 1972-2024.",
+  "citations": [
+    {
+      "author": "World Bank",
+      "title": "World Bank WDI GDP",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator"
+    }
+  ],
+  "cross_references": [
+    "S002"
+  ],
+  "notes": ""
+}

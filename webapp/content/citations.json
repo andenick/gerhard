@@ -1,0 +1,14 @@
+{
+  "piketty_saez_zucman_2018": {"author": "Piketty, T., Saez, E., & Zucman, G.", "year": 2018, "title": "Distributional National Accounts: Methods and Estimates for the United States", "source": "Quarterly Journal of Economics 133(2)", "url": "https://gabriel-zucman.eu/usdina/"},
+  "irs_soi": {"author": "Internal Revenue Service", "year": 2024, "title": "Statistics of Income — Individual Income Tax Returns", "source": "IRS SOI", "url": "https://www.irs.gov/statistics"},
+  "cbo": {"author": "Congressional Budget Office", "year": 2024, "title": "The Distribution of Household Income and Federal Taxes", "source": "CBO", "url": "https://www.cbo.gov"},
+  "cbo_ltbo_2024": {"author": "Congressional Budget Office", "year": 2024, "title": "The Long-Term Budget Outlook", "source": "CBO", "url": "https://www.cbo.gov/topics/budget"},
+  "worldbank_wdi": {"author": "World Bank", "year": 2024, "title": "World Development Indicators", "source": "World Bank Open Data", "url": "https://data.worldbank.org"},
+  "treasury_mspd": {"author": "U.S. Department of the Treasury", "year": 2024, "title": "Monthly Statement of the Public Debt (MSPD)", "source": "TreasuryDirect / Fiscal Data", "url": "https://fiscaldata.treasury.gov"},
+  "treasury_mts": {"author": "U.S. Department of the Treasury", "year": 2024, "title": "Monthly Treasury Statement (MTS)", "source": "Fiscal Data", "url": "https://fiscaldata.treasury.gov"},
+  "fed_soma": {"author": "Federal Reserve Bank of New York", "year": 2024, "title": "System Open Market Account (SOMA) Holdings", "source": "FRBNY", "url": "https://www.newyorkfed.org/markets/soma-holdings"},
+  "colm_1955": {"author": "Colm, G.", "year": 1955, "title": "Essays in Public Finance and Fiscal Policy", "source": "Oxford University Press"},
+  "hamilton_1790": {"author": "Hamilton, A.", "year": 1790, "title": "First Report on the Public Credit", "source": "U.S. Treasury"},
+  "owid_gov_spending": {"author": "Our World in Data", "year": 2023, "title": "Government Spending", "source": "OWID", "url": "https://ourworldindata.org/government-spending"},
+  "fred": {"author": "Federal Reserve Bank of St. Louis", "year": 2024, "title": "FRED Economic Data", "source": "FRED", "url": "https://fred.stlouisfed.org"}
+}

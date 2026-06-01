@@ -1,0 +1,12 @@
+# Gitleaks config for Gerhard. Extends the default ruleset, with allowlist
+# entries for verified false positives.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Verified false positives"
+# 'access': 'Professional/academic' is a descriptive config value in a data-source
+# catalog dict, not a secret. The generic-api-key rule mis-flags it.
+regexes = [
+  '''Professional/academic''',
+]

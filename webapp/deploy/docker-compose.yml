@@ -1,0 +1,55 @@
+# Gerhard — self-host stack: app + nginx + scheduled refresh.
+# From project root:  docker compose -f webapp/deploy/docker-compose.yml up -d --build
+services:
+  app:
+    build:
+      context: ../..
+      dockerfile: webapp/deploy/Dockerfile
+    environment:
+      - PYTHONPATH=/app/webapp
+      - FRED_API_KEY=${FRED_API_KEY}
+      - GERHARD_HOST=${GERHARD_HOST:-gerhard.local}
+    volumes:
+      - ../../Technical:/app/Technical:ro
+      - ../../Countries:/app/Countries:ro
+      - ../../Analysis_Modules:/app/Analysis_Modules:ro
+      - gerhard_site_data:/app/webapp/site_data
+    command: >
+      sh -c "python /app/webapp/data_pipeline/build_cache.py &&
+             gunicorn app.main:app --chdir /app/webapp
+             -k uvicorn.workers.UvicornWorker -w 2 -b 0.0.0.0:8080 --timeout 120"
+    expose:
+      - "8080"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:8080/healthz').status==200 else 1)"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+  refresh:
+    build:
+      context: ../..
+      dockerfile: webapp/deploy/Dockerfile
+    environment:
+      - PYTHONPATH=/app/webapp
+      - FRED_API_KEY=${FRED_API_KEY}
+    volumes:
+      - ../../Technical:/app/Technical:ro
+      - gerhard_site_data:/app/webapp/site_data
+    command: >
+      sh -c "while true; do python /app/webapp/data_pipeline/refresh.py; sleep 21600; done"
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:1.27-alpine
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.gerhard.conf:/etc/nginx/conf.d/default.conf:ro
+    restart: unless-stopped
+
+volumes:
+  gerhard_site_data:

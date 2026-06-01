@@ -1,0 +1,49 @@
+{
+  "series_id": "S020",
+  "series_name": "WID Inequality Panel",
+  "module": "global_comparative",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://wid.world/data/",
+      "source": "WID.world (4.1 GB)"
+    },
+    {
+      "type": "module_methodology",
+      "text": "Cross-country comparative analysis uses panel econometric methods: fixed effects, structural breaks (Bai-Perron), convergence tests, cluster analysis (4 fiscal archetypes), and Granger causality.",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "WID.world (4.1 GB)",
+      "url": "https://wid.world/data/",
+      "access_method": "API",
+      "coverage": "global_180",
+      "period": "1900-2024"
+    }
+  ],
+  "data_columns": [
+    "S020-A",
+    "S020-B",
+    "S020-C",
+    "S020-D",
+    "S020-E",
+    "S020-F",
+    "S020-G"
+  ],
+  "construction": "direct",
+  "units": "mixed (share, index)",
+  "methodology_summary": "WID Inequality Panel: Top income shares, Gini, wealth distribution from World Inequality Database. Source: WID.world (4.1 GB). Construction: direct. Coverage: global_180, 1900-2024.",
+  "citations": [
+    {
+      "author": "World Inequality Lab (Piketty, Saez, Zucman et al.)",
+      "title": "WID.world (4.1 GB)",
+      "year": 2024,
+      "url": "https://wid.world/data/"
+    }
+  ],
+  "cross_references": [],
+  "notes": ""
+}

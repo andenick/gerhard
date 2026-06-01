@@ -1,0 +1,50 @@
+{
+  "series_id": "S002",
+  "series_name": "Clean Tax Panel",
+  "module": "tax_revenue",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://data.worldbank.org/indicator",
+      "source": "World Bank WDI (cleaned)"
+    },
+    {
+      "type": "module_methodology",
+      "text": "Tax revenue analysis follows the standard public finance approach: revenue-to-GDP ratios enable cross-country comparison by normalizing for economic size. The World Bank's GC.TAX.TOTL.GD.ZS is the most widely used cross-country tax indicator.",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "World Bank WDI (cleaned)",
+      "url": "https://data.worldbank.org/indicator",
+      "access_method": "API",
+      "coverage": "global_192",
+      "period": "1972-2024"
+    }
+  ],
+  "data_columns": [
+    "S002-A",
+    "S002-B",
+    "S002-C",
+    "S002-D",
+    "S002-E",
+    "S002-F"
+  ],
+  "construction": "formula",
+  "units": "percent_gdp",
+  "methodology_summary": "Clean Tax Panel: Cleaned tax panel with outlier removal, balanced country coverage, Sudan 638% correction. Source: World Bank WDI (cleaned). Construction: formula. Coverage: global_192, 1972-2024.",
+  "citations": [
+    {
+      "author": "World Bank",
+      "title": "World Bank WDI (cleaned)",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator"
+    }
+  ],
+  "cross_references": [
+    "S001"
+  ],
+  "notes": ""
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ site_title }} — {{ tagline }}{% endblock %}</title>
+  <meta name="description" content="{{ tagline }}">
+  <link rel="stylesheet" href="/static/css/site.css">
+  <script src="/static/vendor/plotly.min.js"></script>
+  <script defer src="/static/js/app.js"></script>
+</head>
+<body>
+<header class="nav">
+  <div class="inner">
+    <a class="brand" href="/">{{ site_title }}<small>{{ tagline }}</small></a>
+    <nav>
+      {% set s = section|default('') %}
+      <a href="/history" class="{{ 'active' if s == 'History' }}">History</a>
+      <a href="/modern" class="{{ 'active' if s == 'Modern' }}">Modern</a>
+      <a href="/treasury" class="{{ 'active' if s == 'Treasury' }}">Treasury</a>
+      <a href="/explore" class="{{ 'active' if s == 'Explore' }}">Explore</a>
+      <a href="/data" class="{{ 'active' if s == 'Data' }}">Data</a>
+      <a href="/about" class="{{ 'active' if s == 'About' }}">About</a>
+    </nav>
+  </div>
+</header>
+
+{% block body %}{% endblock %}
+
+<footer class="site">
+  <div class="container">
+    <strong>{{ site_title }}</strong> — {{ tagline }}.
+    Named for Gerhard Colm (1897–1968). Data from World Bank, U.S. Treasury, IRS/CBO,
+    Piketty–Saez–Zucman DINA, and others. <a href="/methodology">Methodology &amp; sources</a> ·
+    <a href="/data">Download data</a>.
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+  "series_id": "S007",
+  "series_name": "Revenue Composition Panel",
+  "module": "tax_revenue",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://data.worldbank.org/indicator",
+      "source": "World Bank WDI (fiscal detail)"
+    },
+    {
+      "type": "module_methodology",
+      "text": "Tax revenue analysis follows the standard public finance approach: revenue-to-GDP ratios enable cross-country comparison by normalizing for economic size. The World Bank's GC.TAX.TOTL.GD.ZS is the most widely used cross-country tax indicator.",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "World Bank WDI (fiscal detail)",
+      "url": "https://data.worldbank.org/indicator",
+      "access_method": "API",
+      "coverage": "global",
+      "period": "1972-2024"
+    }
+  ],
+  "data_columns": [
+    "S007-A",
+    "S007-B",
+    "S007-C",
+    "S007-D",
+    "S007-E",
+    "S007-F",
+    "S007-G",
+    "S007-H",
+    "S007-I",
+    "S007-J"
+  ],
+  "construction": "direct",
+  "units": "percent_revenue",
+  "methodology_summary": "Revenue Composition Panel: Tax revenue decomposed by type: income, goods/services, trade, other. Source: World Bank WDI (fiscal detail). Construction: direct. Coverage: global, 1972-2024.",
+  "citations": [
+    {
+      "author": "World Bank",
+      "title": "World Bank WDI (fiscal detail)",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator"
+    }
+  ],
+  "cross_references": [],
+  "notes": ""
+}

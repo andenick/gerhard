@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+site_data/cache/
+site_data/raw_feeds/
+site_data/*.log
+site_data/_*.txt
+site_data/site_manifest.json
+site_data/refresh_log.json
+site_data/downloads/
+.env
+app/static/vendor/
+venv/
+.venv/

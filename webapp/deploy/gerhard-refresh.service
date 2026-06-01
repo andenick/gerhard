@@ -1,0 +1,13 @@
+# systemd oneshot: refresh live data. Paired with gerhard-refresh.timer.
+[Unit]
+Description=Gerhard live data refresh
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=gerhard
+WorkingDirectory=/opt/gerhard/webapp
+Environment=PYTHONPATH=/opt/gerhard/webapp
+Environment=FRED_API_KEY=
+ExecStart=/opt/gerhard/venv/bin/python /opt/gerhard/webapp/data_pipeline/refresh.py

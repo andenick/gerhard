@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Data Explorer — {{ site_title }}{% endblock %}
+{% block body %}
+<main class="content">
+  <div class="container" id="explorer">
+    <h1>Interactive Data Explorer</h1>
+    <p class="prose">Explore every cached fiscal data series. Pick a series, a variable, and
+      (where available) countries. Download the underlying data from any chart.</p>
+    <div class="controls">
+      <div><label for="ex-series">Series</label><select id="ex-series"></select></div>
+      <div><label for="ex-variable">Variable</label><select id="ex-variable"></select></div>
+      <div><label for="ex-country">Countries (multi-select)</label><select id="ex-country" multiple size="1"></select></div>
+    </div>
+    <div class="chart-card" id="ex-chart"></div>
+  </div>
+</main>
+{% endblock %}

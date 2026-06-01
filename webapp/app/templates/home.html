@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="hero">
+  <div class="container">
+    <h1>The History &amp; Present of American Public Finance</h1>
+    <p class="lead">How the United States has taxed, spent, borrowed, and managed its debt —
+      from Hamilton's assumption of state debts to today's Treasury market — told through
+      data you can explore and download.</p>
+    <div class="stats">
+      {% for s in stats %}
+      <div class="stat"><div class="v">{{ s.value }}</div><div class="l">{{ s.label }}</div></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<main class="content">
+  <div class="container">
+    <div class="cards">
+      <div class="card"><h3>The History</h3>
+        <p>Seven eras of American public finance, each illustrated with live charts —
+          from tariffs and the first income tax to the New Deal and today.</p>
+        <a href="/history">Explore the history →</a></div>
+      <div class="card"><h3>Modern Public Finance</h3>
+        <p>Who pays, where it goes, and how much we borrow: revenue, spending by function,
+          deficits, debt, and the distribution of the tax burden.</p>
+        <a href="/modern">See the modern picture →</a></div>
+      <div class="card"><h3>The Treasury Market &amp; Duration</h3>
+        <p>The structure of the national debt: maturity and duration, the Fed's removal of
+          duration risk through QE, the yield curve, and auctions.</p>
+        <a href="/treasury">Into the Treasury market →</a></div>
+      <div class="card"><h3>Explore the Data</h3>
+        <p>An interactive explorer over every fiscal data series, with charts, tables,
+          and one-click downloads in CSV, Excel, JSON, and Parquet.</p>
+        <a href="/explore">Open the explorer →</a></div>
+    </div>
+    <h2 style="font-family:Georgia,serif">A data-driven history</h2>
+    <div class="chart-embed" data-chart="us_top_income_shares" data-params=""></div>
+  </div>
+</main>
+{% endblock %}

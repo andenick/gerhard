@@ -1,0 +1,7 @@
+# Alternative to nginx: Caddy gives automatic HTTPS. Point DNS at the box first.
+# caddy run --config webapp/deploy/Caddyfile
+gerhard.local {
+    reverse_proxy localhost:8080
+    encode gzip
+    header /static/* Cache-Control "public, max-age=86400"
+}

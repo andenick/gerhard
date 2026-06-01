@@ -1,0 +1,683 @@
+{
+  "_metadata": {
+    "project": "Gerhard",
+    "description": "Global Public Finance Analysis Platform — series registry",
+    "framework": "anu_framework_v8.0",
+    "created": "2026-05-12",
+    "last_updated": "2026-05-12",
+    "total_series": 28,
+    "series_id_range": "S001-S028",
+    "note": "Each series maps to a LEPAVR P## panel output. Subseries (individual indicator columns) to be populated during detailed ingestion."
+  },
+  "series": {
+    "S001": {
+      "id": "S001",
+      "name": "Standardized Tax Data",
+      "description": "World Bank tax revenue indicators standardized with country codes and year alignment",
+      "content_type": "time_series",
+      "tier": 2,
+      "module": "tax_revenue",
+      "source": "World Bank WDI",
+      "units": "percent_gdp",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "global_193",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L00",
+        "processor": "P00"
+      },
+      "output_file": "Technical/data/processed/standardized_tax_data.xlsx",
+      "status": "intermediate",
+      "note": "Tier 2 intermediate; consumed by P40, not exported to Output/",
+      "subseries": {}
+    },
+    "S002": {
+      "id": "S002",
+      "name": "Clean Tax Panel",
+      "description": "Cleaned tax panel with outlier removal, balanced country coverage, Sudan 638% correction",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "tax_revenue",
+      "source": "World Bank WDI (cleaned)",
+      "units": "percent_gdp",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "global_192",
+      "construction": "formula",
+      "formula": "Cleaned S001 with gap handling and outlier removal",
+      "lepavr": {
+        "loader": "L00",
+        "processor": "P40"
+      },
+      "depends_on": [
+        "S001"
+      ],
+      "output_file": "Outputs/Data/clean_tax_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S003": {
+      "id": "S003",
+      "name": "Disaggregated Expenditure Panel",
+      "description": "Government expenditure disaggregated by category from World Bank WDI",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "expenditure",
+      "source": "World Bank WDI",
+      "units": "percent_gdp",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "global_205",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L55",
+        "processor": "P45"
+      },
+      "output_file": "Outputs/Data/expenditure_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S004": {
+      "id": "S004",
+      "name": "Disaggregated Debt Panel",
+      "description": "Public debt disaggregated by instrument type from World Bank WDI",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "public_debt",
+      "source": "World Bank WDI",
+      "units": "percent_gdp",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "global_163",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L75",
+        "processor": "P50"
+      },
+      "output_file": "Outputs/Data/debt_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S005": {
+      "id": "S005",
+      "name": "Enriched Tax Panel (GDP-integrated)",
+      "description": "Tax panel enriched with World Bank WDI GDP data for per-capita and level calculations",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "tax_revenue",
+      "source": "World Bank WDI GDP",
+      "units": "mixed (percent_gdp, usd_per_capita, billions_usd)",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "global_192",
+      "construction": "formula",
+      "formula": "S002 merged with World Bank WDI GDP; tax_revenue_usd = tax_pct_gdp × GDP",
+      "lepavr": {
+        "loader": "L50",
+        "processor": "P55"
+      },
+      "depends_on": [
+        "S002"
+      ],
+      "output_file": "Outputs/Data/enriched_tax_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S006": {
+      "id": "S006",
+      "name": "Master Fiscal Panel",
+      "description": "Unified fiscal panel merging tax + expenditure + debt + GDP (29 columns)",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "tax_revenue",
+      "source": "Composite (WDI tax, expenditure, debt, GDP)",
+      "units": "mixed",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "global_238",
+      "construction": "composite",
+      "components": [
+        "S005",
+        "S003",
+        "S004"
+      ],
+      "lepavr": {
+        "loader": null,
+        "processor": "P60"
+      },
+      "depends_on": [
+        "S005",
+        "S003",
+        "S004"
+      ],
+      "output_file": "Outputs/Data/master_fiscal_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S007": {
+      "id": "S007",
+      "name": "Revenue Composition Panel",
+      "description": "Tax revenue decomposed by type: income, goods/services, trade, other",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "tax_revenue",
+      "source": "World Bank WDI (fiscal detail)",
+      "units": "percent_revenue",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "global",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L55",
+        "processor": "P65"
+      },
+      "output_file": "Outputs/Data/revenue_composition_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S008": {
+      "id": "S008",
+      "name": "Expenditure Composition Panel",
+      "description": "Government expenditure decomposed by economic classification",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "expenditure",
+      "source": "World Bank WDI",
+      "units": "percent_gdp",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "global",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L77",
+        "processor": "P70"
+      },
+      "output_file": "Outputs/Data/expenditure_composition_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S009": {
+      "id": "S009",
+      "name": "Balance of Payments Panel",
+      "description": "Current account, financial account, trade balance, FDI from WDI",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "global_comparative",
+      "source": "World Bank WDI",
+      "units": "mixed (percent_gdp, billions_usd)",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "global",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L60",
+        "processor": "P75"
+      },
+      "output_file": "Outputs/Data/bop_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S010": {
+      "id": "S010",
+      "name": "Financial Sector Panel",
+      "description": "Bank credit, M2, stock market cap, insurance from WDI",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "global_comparative",
+      "source": "World Bank WDI",
+      "units": "percent_gdp",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "global_243",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L76",
+        "processor": "P76"
+      },
+      "output_file": "Outputs/Data/financial_sector_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S011": {
+      "id": "S011",
+      "name": "Expenditure Functions Panel",
+      "description": "Government expenditure by functional category (COFOG-adjacent) from WDI",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "expenditure",
+      "source": "World Bank WDI",
+      "units": "percent_gdp",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "global_259",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L77",
+        "processor": "P77"
+      },
+      "output_file": "Outputs/Data/expenditure_functions_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S012": {
+      "id": "S012",
+      "name": "Income Panel",
+      "description": "GNI, adjusted net national income, household consumption from WDI",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "global_comparative",
+      "source": "World Bank WDI",
+      "units": "mixed (current_usd, percent_gdp)",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "global_258",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L78",
+        "processor": "P78"
+      },
+      "output_file": "Outputs/Data/income_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S013": {
+      "id": "S013",
+      "name": "Labor Panel",
+      "description": "Employment, unemployment, labor force participation from WDI",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "global_comparative",
+      "source": "World Bank WDI",
+      "units": "mixed (percent, ratio)",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "global_235",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L79",
+        "processor": "P79"
+      },
+      "output_file": "Outputs/Data/labor_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S014": {
+      "id": "S014",
+      "name": "Exchange Rate Panel",
+      "description": "Official exchange rate, real effective exchange rate, PPP from WDI",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "global_comparative",
+      "source": "World Bank WDI",
+      "units": "mixed (lcu_per_usd, index)",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "global",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L70",
+        "processor": "P80"
+      },
+      "output_file": "Outputs/Data/exchange_rate_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S015": {
+      "id": "S015",
+      "name": "Trade Panel",
+      "description": "Exports, imports, trade openness, terms of trade from WDI",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "global_comparative",
+      "source": "World Bank WDI",
+      "units": "mixed (percent_gdp, billions_usd)",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "global",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L65",
+        "processor": "P85"
+      },
+      "output_file": "Outputs/Data/trade_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S016": {
+      "id": "S016",
+      "name": "Debt Composition Panel",
+      "description": "External vs domestic debt, short vs long term, debt service ratios",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "public_debt",
+      "source": "World Bank WDI",
+      "units": "mixed (percent_gdp, percent_gni, percent_exports)",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "global",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L75",
+        "processor": "P90"
+      },
+      "output_file": "Outputs/Data/debt_composition_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S017": {
+      "id": "S017",
+      "name": "Social Outcomes Panel",
+      "description": "Life expectancy, infant mortality, education enrollment from WDI",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "global_comparative",
+      "source": "World Bank WDI",
+      "units": "mixed (years, per_1000, percent)",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "global",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L80",
+        "processor": "P95"
+      },
+      "output_file": "Outputs/Data/social_outcomes_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S018": {
+      "id": "S018",
+      "name": "National Accounts Panel",
+      "description": "GDP components, savings, investment, government consumption from WDI",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "global_comparative",
+      "source": "World Bank WDI",
+      "units": "mixed (percent_gdp, current_usd)",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "global",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L85",
+        "processor": "P97"
+      },
+      "output_file": "Outputs/Data/national_accounts_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S019": {
+      "id": "S019",
+      "name": "Aggregates Panel",
+      "description": "Regional and income-group aggregated fiscal indicators",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "global_comparative",
+      "source": "World Bank WDI (aggregated)",
+      "units": "mixed",
+      "year_range": [
+        1972,
+        2024
+      ],
+      "country_scope": "regional_aggregates",
+      "construction": "composite",
+      "components": [
+        "S006"
+      ],
+      "lepavr": {
+        "loader": null,
+        "processor": "P98"
+      },
+      "depends_on": [
+        "S006"
+      ],
+      "output_file": "Outputs/Data/aggregates_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S020": {
+      "id": "S020",
+      "name": "WID Inequality Panel",
+      "description": "Top income shares, Gini, wealth distribution from World Inequality Database",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "global_comparative",
+      "source": "WID.world (4.1 GB)",
+      "units": "mixed (share, index)",
+      "year_range": [
+        1900,
+        2024
+      ],
+      "country_scope": "global_180",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L90",
+        "processor": "P100"
+      },
+      "output_file": "Outputs/Data/inequality_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S021": {
+      "id": "S021",
+      "name": "IMF WEO Panel",
+      "description": "IMF World Economic Outlook macroeconomic indicators and forecasts",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "global_comparative",
+      "source": "IMF World Economic Outlook",
+      "units": "mixed",
+      "year_range": [
+        1980,
+        2029
+      ],
+      "country_scope": "global_221",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L95",
+        "processor": "P105"
+      },
+      "output_file": "Outputs/Data/imf_weo_enriched.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S022": {
+      "id": "S022",
+      "name": "US Monthly Treasury Statement Panel",
+      "description": "US federal receipts and outlays by category from Treasury MTS",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "us_treasury",
+      "source": "US Treasury MTS",
+      "units": "millions_usd",
+      "year_range": [
+        1998,
+        2026
+      ],
+      "country_scope": "US",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L106",
+        "processor": "P106"
+      },
+      "output_file": "Outputs/Data/us_mts_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S023": {
+      "id": "S023",
+      "name": "Treasury Interest Rates Panel",
+      "description": "Average interest rates on US Treasury securities by maturity",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "us_treasury",
+      "source": "US Treasury / TreasuryDirect",
+      "units": "percent",
+      "year_range": [
+        2001,
+        2026
+      ],
+      "country_scope": "US",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L108",
+        "processor": "P108"
+      },
+      "output_file": "Outputs/Data/treasury_interest_rates_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S024": {
+      "id": "S024",
+      "name": "Governance Panel",
+      "description": "World Governance Indicators: voice, stability, effectiveness, regulation, rule of law, corruption",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "global_comparative",
+      "source": "World Bank WGI",
+      "units": "index (-2.5 to 2.5)",
+      "year_range": [
+        1996,
+        2023
+      ],
+      "country_scope": "global_205",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L100",
+        "processor": "P110"
+      },
+      "output_file": "Outputs/Data/governance_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S025": {
+      "id": "S025",
+      "name": "US Monetary Panel",
+      "description": "FRED monetary aggregates: M1, M2, monetary base, velocity",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "us_treasury",
+      "source": "FRED (St. Louis Fed)",
+      "units": "mixed (billions_usd, ratio)",
+      "year_range": [
+        1954,
+        2026
+      ],
+      "country_scope": "US",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L111",
+        "processor": "P111"
+      },
+      "output_file": "Outputs/Data/us_monetary_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S026": {
+      "id": "S026",
+      "name": "MSPD Panel",
+      "description": "Monthly Statement of the Public Debt — $30.6T outstanding, security-level detail",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "us_treasury",
+      "source": "US Treasury MSPD (TreasuryDirect)",
+      "units": "millions_usd",
+      "year_range": [
+        2001,
+        2026
+      ],
+      "country_scope": "US",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L105",
+        "processor": "P115"
+      },
+      "output_file": "Output/Data/treasury_security_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S027": {
+      "id": "S027",
+      "name": "Yield Curve Panel",
+      "description": "Daily US Treasury yield curves (19 maturities, 1954-present)",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "us_treasury",
+      "source": "US Treasury / FRED",
+      "units": "percent",
+      "year_range": [
+        1954,
+        2026
+      ],
+      "country_scope": "US",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L110",
+        "processor": "P120"
+      },
+      "output_file": "Outputs/Data/yield_curve_daily.xlsx",
+      "status": "active",
+      "subseries": {}
+    },
+    "S028": {
+      "id": "S028",
+      "name": "Treasury Auction Panel",
+      "description": "US Treasury auction results — bid-to-cover, high yield, tail by security type",
+      "content_type": "time_series",
+      "tier": 1,
+      "module": "us_treasury",
+      "source": "US Treasury Auction Results",
+      "units": "mixed (percent, ratio, billions_usd)",
+      "year_range": [
+        1979,
+        2026
+      ],
+      "country_scope": "US",
+      "construction": "direct",
+      "lepavr": {
+        "loader": "L115",
+        "processor": "P125"
+      },
+      "output_file": "Outputs/Data/treasury_auction_panel.xlsx",
+      "status": "active",
+      "subseries": {}
+    }
+  }
+}

@@ -1,0 +1,10 @@
+# Run the live refresh daily at 06:30 (Treasury morning releases). Adjust as needed.
+[Unit]
+Description=Schedule Gerhard live data refresh
+
+[Timer]
+OnCalendar=*-*-* 06:30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

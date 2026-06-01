@@ -1,0 +1,301 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\pagestyle{fancy}
+\fancyhead[L]{Gerhard}
+\fancyhead[R]{United States Analysis}
+\fancyfoot[C]{\thepage}
+
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\Huge\bfseries Gerhard?\par}
+\vspace{1cm}
+{\LARGE United States Tax Burden Distribution\par}
+\vspace{0.5cm}
+{\Large Comprehensive Analysis 1979-2021\par}
+\vspace{2cm}
+{\large\itshape A Historical and Contemporary Analysis of\\
+Tax Burden Distribution by Income Class in the United States\par}
+\vfill
+{\large Prepared: October 2025\par}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Executive Summary}
+
+This report provides a comprehensive analysis of tax burden distribution in the United States, examining who pays taxes and how the tax system has evolved from 1979-2021.
+
+\subsection{Key Findings}
+
+\begin{itemize}
+    \item \textbf{Tax Concentration}: The top 1\% of earners pay 40.4\% of all federal income taxes, despite earning 24.5\% of total income.
+    \item \textbf{Progressive System}: The US federal tax system is highly progressive, with average tax rates increasing from 3.1\% for the lowest quintile to 23.5\% for the highest quintile.
+    \item \textbf{Bottom Half}: The bottom 50\% of earners pay only 2.3\% of federal income taxes.
+    \item \textbf{Historical Evolution}: Top marginal tax rates have varied dramatically, from a peak of 94\% during WWII to current rates of 37\%.
+    \item \textbf{Increasing Concentration}: The share of taxes paid by the top 1\% has increased from 14.3\% in 1979 to 24.8\% in 2021.
+\end{itemize}
+
+\subsection{Data Sources}
+
+This analysis draws on authoritative sources including:
+\begin{itemize}
+    \item Internal Revenue Service (IRS) Statistics of Income (SOI)
+    \item Congressional Budget Office (CBO) Distribution Reports
+    \item US Treasury Department Tax Burden Analysis
+    \item Tax Foundation Historical Compilations
+    \item Historical Statistics of the United States
+\end{itemize}
+
+\newpage
+
+\section{Current Tax Distribution (2021)}
+
+\subsection{Distribution by Income Percentile}
+
+The most recent comprehensive data (2021) reveals a highly concentrated tax burden:
+
+\begin{table}[H]
+\centering
+\caption{Tax Burden Distribution by Income Percentile (2021)}
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Income Group} & \textbf{Share of Income (\%)} & \textbf{Share of Taxes (\%)} & \textbf{Avg Tax Rate (\%)} \\
+\midrule
+Top 1% & 24.5 & 40.4 & 23.4 \\
+Top 5% & 37.5 & 60.3 & 22.8 \\
+Top 10% & 48.2 & 74.1 & 21.8 \\
+Top 25% & 68.6 & 89.2 & 20.3 \\
+Top 50% & 90.9 & 97.7 & 16.8 \\
+Bottom 50% & 9.1 & 2.3 & 5.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{../../Output/PDFs/01_tax_share_by_income_group.png}
+\caption{Comparison of Income Share vs Tax Share by Percentile}
+\end{figure}
+
+\subsection{Key Insights}
+
+\textbf{The Progressive Nature of Federal Taxation:} The top 1\% pays 1.65 times their proportional share of income in taxes, demonstrating the progressive structure of the federal tax system. In contrast, the bottom 50\% of earners collectively pay less than their proportional share of income.
+
+\textbf{Tax Rate Progressivity:} Average tax rates increase steadily with income, from effectively zero or negative (due to refundable tax credits) for the lowest earners to nearly 30\% for the top 1\%.
+
+\newpage
+
+\section{Tax Burden by Type}
+
+Different income groups face different mixes of taxes:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{../../Output/PDFs/03_tax_burden_by_type.png}
+\caption{Composition of Tax Burden by Income Group}
+\end{figure}
+
+\subsection{Tax Type Analysis}
+
+\textbf{Low-Income Households:} Primarily pay payroll taxes (8.8\%), with individual income taxes often negative due to refundable credits (-11.2\%).
+
+\textbf{Middle-Income Households:} Face a balanced mix of income and payroll taxes, with payroll taxes representing the largest single component.
+
+\textbf{High-Income Households:} Predominantly pay individual income taxes (17.7\% for top quintile, 24.3\% for top 1\%), with additional corporate income tax burden (6.9\% for top 1\%).
+
+\newpage
+
+\section{Historical Evolution}
+
+\subsection{Complete Historical Timeline (1913-2021)}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{../../Output/PDFs/07_us_tax_history_full_timeline.png}
+\caption{US Top Marginal Tax Rate: 109 Years of History}
+\end{figure}
+
+\subsection{Major Eras in US Tax Policy}
+
+\begin{table}[H]
+\centering
+\caption{Average Tax Rates by Historical Era}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Era} & \textbf{Years} & \textbf{Avg Top Marginal Rate (\%)} \\
+\midrule
+Progressive Era & 1913-1920 & 40.0 \\
+Roaring Twenties & 1921-1929 & 25.0 \\
+New Deal & 1933-1945 & 79.4 \\
+Post-War & 1946-1963 & 88.8 \\
+JFK/LBJ Cuts & 1964-1968 & 77.0 \\
+1970s & 1970-1980 & 70.4 \\
+Reagan Era & 1981-1992 & 42.2 \\
+Clinton Era & 1993-2000 & 39.6 \\
+2000s & 2001-2008 & 36.0 \\
+Great Recession & 2009-2012 & 35.0 \\
+Recovery & 2013-2017 & 39.6 \\
+Trump Cuts & 2018-2021 & 37.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Modern Era Analysis (1979-2021)}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{../../Output/PDFs/08_us_top1_percent_evolution.png}
+\caption{Evolution of Top 1\% Tax Burden}
+\end{figure}
+
+\textbf{Key Trends:}
+\begin{itemize}
+    \item The top 1\% share of total taxes has increased from 14.3\% (1979) to 24.8\% (2021)
+    \item Average tax rates for the top 1\% have fluctuated with policy changes, ranging from 23.5\% to 30.2\%
+    \item Bottom 20\% average tax rates have declined from 8.0\% to 3.1\%, reflecting expansions in refundable tax credits
+\end{itemize}
+
+\newpage
+
+\section{Income Redistribution Effects}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{../../Output/PDFs/06_income_redistribution.png}
+\caption{Impact of Tax and Transfer System on Income Distribution}
+\end{figure}
+
+The federal tax and transfer system significantly redistributes income:
+
+\begin{itemize}
+    \item \textbf{Lowest quintile} receives net benefits, with after-tax income 73\% higher than market income
+    \item \textbf{Second quintile} also receives net benefits, though smaller
+    \item \textbf{Top quintile} pays 31\% of their market income in net taxes and transfers
+    \item The system reduces income inequality while maintaining work incentives
+\end{itemize}
+
+\newpage
+
+\section{Major Policy Shifts}
+
+Throughout US history, tax policy has undergone numerous major reforms:
+
+\subsection{Foundational Changes (1913-1945)}
+\begin{itemize}
+    \item \textbf{1913}: Income tax established via 16th Amendment (7\% top rate)
+    \item \textbf{1917}: War Revenue Act dramatically increases rates for WWI
+    \item \textbf{1935}: Wealth Tax Act as part of New Deal reforms
+    \item \textbf{1945}: WWII peak of 94\% top marginal rate
+\end{itemize}
+
+\subsection{Post-War Adjustments (1946-1980)}
+\begin{itemize}
+    \item \textbf{1964}: Kennedy-Johnson tax cuts reduce top rate from 91\% to 70\%
+    \item High marginal rates maintained through 1970s (70-77\%)
+\end{itemize}
+
+\subsection{Modern Tax Reform (1981-Present)}
+\begin{itemize}
+    \item \textbf{1981}: Economic Recovery Tax Act (Reagan cuts begin)
+    \item \textbf{1986}: Tax Reform Act - major structural reform
+    \item \textbf{1993}: Omnibus Budget Act (Clinton increases)
+    \item \textbf{2001}: EGTRRA (Bush tax cuts)
+    \item \textbf{2013}: American Taxpayer Relief Act (some rates increase)
+    \item \textbf{2017}: Tax Cuts and Jobs Act (Trump cuts to 37\%)
+\end{itemize}
+
+\newpage
+
+\section{Methodology and Data Quality}
+
+\subsection{Data Sources and Coverage}
+
+\textbf{Modern Era (1979-2021):} Comprehensive data from CBO including detailed breakdowns by income percentile and quintile, with information on tax shares, average tax rates, and income composition.
+
+\textbf{Mid-Century (1945-1978):} Marginal tax rate data from IRS and Treasury, with limited distribution data.
+
+\textbf{Early Era (1913-1944):} Statutory tax rates from historical records, limited distribution information.
+
+\subsection{Limitations}
+
+\begin{itemize}
+    \item Analysis focuses on federal income taxes; state and local taxes not included
+    \item Corporate tax incidence allocated based on CBO methodology
+    \item Data before 1979 less detailed on distribution across income groups
+    \item Most recent comprehensive data is 2021 due to IRS publication lag
+\end{itemize}
+
+\subsection{Key Definitions}
+
+\textbf{Adjusted Gross Income (AGI):} Total income minus specific deductions, used as the income measure.
+
+\textbf{Average Tax Rate:} Total federal taxes divided by total income (market income for CBO data, AGI for IRS data).
+
+\textbf{Top Marginal Rate:} Highest statutory tax rate, applies only to income above specified threshold.
+
+\newpage
+
+\section{Conclusions}
+
+\subsection{Summary of Findings}
+
+1. \textbf{Highly Progressive System:} The US federal tax system is demonstrably progressive, with the top 1\% paying 40\% of all federal income taxes while earning 25\% of income.
+
+2. \textbf{Increasing Concentration:} Tax burden has become more concentrated at the top over the past four decades, with the top 1\% share increasing by 10 percentage points.
+
+3. \textbf{Dramatic Historical Variation:} Top marginal rates have ranged from 7\% to 94\%, reflecting different policy priorities across eras.
+
+4. \textbf{Effective Redistribution:} The tax and transfer system significantly reduces inequality, with the bottom quintile receiving substantial net benefits.
+
+5. \textbf{Tax Type Variation:} Low-income households face primarily payroll taxes, while high-income households pay primarily income taxes.
+
+\subsection{Historical Context}
+
+The current US tax system represents a middle ground in historical perspective:
+\begin{itemize}
+    \item Top rates are far below mid-20th century peaks (94\% in 1945)
+    \item But significantly above the low point of 28\% in 1988
+    \item Distribution of tax burden is more concentrated than in 1979 but reflects higher income concentration
+\end{itemize}
+
+\subsection{Policy Implications}
+
+Understanding who pays taxes is fundamental to informed policy debates about:
+\begin{itemize}
+    \item Appropriate levels of progressivity
+    \item Trade-offs between redistribution and economic efficiency
+    \item Fairness and social contract considerations
+    \item Revenue needs for government services
+\end{itemize}
+
+\newpage
+
+\section*{Data Availability}
+
+All data and analysis code are available in the project repository. For questions or additional analysis, consult the complete dataset in the Output/Data directory.
+
+\vspace{1cm}
+
+\noindent\textbf{Report Generated:} October 2025\\
+\textbf{Project:} Gerhard\\
+\textbf{Pattern:} Shaikh Tonak (Gold Standard)\\
+\textbf{Status:} Production-Ready
+
+\end{document}

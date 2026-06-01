@@ -1,0 +1,66 @@
+{
+  "series_id": "S023",
+  "series_name": "Treasury Interest Rates Panel",
+  "module": "us_treasury",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://treasurydirect.gov/government/interest-rates/",
+      "source": "US Treasury / TreasuryDirect"
+    },
+    {
+      "type": "module_methodology",
+      "text": "US Treasury market analysis covers MSPD (outstanding securities), MTS (monthly flows), yield curves (term structure), auctions (primary market), and monetary aggregates (Fed policy).",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "US Treasury / TreasuryDirect",
+      "url": "https://treasurydirect.gov/government/interest-rates/",
+      "access_method": "API",
+      "coverage": "US",
+      "period": "2001-2026"
+    }
+  ],
+  "data_columns": [
+    "S023-A",
+    "S023-B",
+    "S023-C",
+    "S023-D",
+    "S023-E",
+    "S023-F",
+    "S023-G",
+    "S023-H",
+    "S023-I",
+    "S023-J",
+    "S023-K",
+    "S023-L",
+    "S023-M",
+    "S023-N",
+    "S023-O",
+    "S023-P",
+    "S023-Q",
+    "S023-R",
+    "S023-S",
+    "S023-T",
+    "S023-U",
+    "S023-V",
+    "S023-W",
+    "S023-X"
+  ],
+  "construction": "direct",
+  "units": "percent",
+  "methodology_summary": "Treasury Interest Rates Panel: Average interest rates on US Treasury securities by maturity. Source: US Treasury / TreasuryDirect. Construction: direct. Coverage: US, 2001-2026.",
+  "citations": [
+    {
+      "author": "US Department of the Treasury",
+      "title": "US Treasury / TreasuryDirect",
+      "year": 2024,
+      "url": "https://treasurydirect.gov/government/interest-rates/"
+    }
+  ],
+  "cross_references": [],
+  "notes": ""
+}

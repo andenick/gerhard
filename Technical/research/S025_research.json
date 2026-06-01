@@ -1,0 +1,57 @@
+{
+  "series_id": "S025",
+  "series_name": "US Monetary Panel",
+  "module": "us_treasury",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://fred.stlouisfed.org/",
+      "source": "FRED (St. Louis Fed)"
+    },
+    {
+      "type": "module_methodology",
+      "text": "US Treasury market analysis covers MSPD (outstanding securities), MTS (monthly flows), yield curves (term structure), auctions (primary market), and monetary aggregates (Fed policy).",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "FRED (St. Louis Fed)",
+      "url": "https://fred.stlouisfed.org/",
+      "access_method": "API",
+      "coverage": "US",
+      "period": "1954-2026"
+    }
+  ],
+  "data_columns": [
+    "S025-A",
+    "S025-B",
+    "S025-C",
+    "S025-D",
+    "S025-E",
+    "S025-F",
+    "S025-G",
+    "S025-H",
+    "S025-I",
+    "S025-J",
+    "S025-K",
+    "S025-L",
+    "S025-M",
+    "S025-N",
+    "S025-O"
+  ],
+  "construction": "direct",
+  "units": "mixed (billions_usd, ratio)",
+  "methodology_summary": "US Monetary Panel: FRED monetary aggregates: M1, M2, monetary base, velocity. Source: FRED (St. Louis Fed). Construction: direct. Coverage: US, 1954-2026.",
+  "citations": [
+    {
+      "author": "Federal Reserve Bank of St. Louis",
+      "title": "FRED (St. Louis Fed)",
+      "year": 2024,
+      "url": "https://fred.stlouisfed.org/"
+    }
+  ],
+  "cross_references": [],
+  "notes": ""
+}

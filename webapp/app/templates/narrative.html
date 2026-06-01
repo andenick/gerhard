@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} — {{ site_title }}{% endblock %}
+{% block body %}
+<main class="content">
+  <div class="container">
+    {% if section %}<div class="breadcrumb">{{ section }}{% if page.meta and page.meta.period %} · {{ page.meta.period }}{% endif %}</div>{% endif %}
+    <article class="prose">
+      <h1>{{ page.title }}</h1>
+      {{ page.html | safe }}
+      {% if page.citations %}
+      <ol class="references">
+        {% for c in page.citations %}
+        <li id="ref-{{ c.n }}">{{ c.author or "" }}{% if c.year %} ({{ c.year }}){% endif %}.
+          <em>{{ c.title or c.key }}</em>{% if c.source %}. {{ c.source }}{% endif %}{% if c.url %}.
+          <a href="{{ c.url }}">link</a>{% endif %}.</li>
+        {% endfor %}
+      </ol>
+      {% endif %}
+    </article>
+    {% if eras %}
+    <nav class="cards" style="margin-top:48px">
+      {% for e in eras %}<a class="card" href="/history/{{ e.slug }}"><h3>{{ e.title }}</h3><p>{{ e.period }}</p></a>{% endfor %}
+    </nav>
+    {% endif %}
+  </div>
+</main>
+{% endblock %}

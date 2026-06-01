@@ -1,0 +1,1 @@
+"""Gerhard pipeline: visualize stage."""

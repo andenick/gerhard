@@ -1,0 +1,50 @@
+{
+  "series_id": "S018",
+  "series_name": "National Accounts Panel",
+  "module": "global_comparative",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://data.worldbank.org/indicator",
+      "source": "World Bank WDI"
+    },
+    {
+      "type": "module_methodology",
+      "text": "Cross-country comparative analysis uses panel econometric methods: fixed effects, structural breaks (Bai-Perron), convergence tests, cluster analysis (4 fiscal archetypes), and Granger causality.",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "World Bank WDI",
+      "url": "https://data.worldbank.org/indicator",
+      "access_method": "API",
+      "coverage": "global",
+      "period": "1972-2024"
+    }
+  ],
+  "data_columns": [
+    "S018-A",
+    "S018-B",
+    "S018-C",
+    "S018-D",
+    "S018-E",
+    "S018-F",
+    "S018-G",
+    "S018-H"
+  ],
+  "construction": "direct",
+  "units": "mixed (percent_gdp, current_usd)",
+  "methodology_summary": "National Accounts Panel: GDP components, savings, investment, government consumption from WDI. Source: World Bank WDI. Construction: direct. Coverage: global, 1972-2024.",
+  "citations": [
+    {
+      "author": "World Bank",
+      "title": "World Bank WDI",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator"
+    }
+  ],
+  "cross_references": [],
+  "notes": ""
+}

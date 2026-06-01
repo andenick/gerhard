@@ -1,0 +1,50 @@
+{
+  "series_id": "S024",
+  "series_name": "Governance Panel",
+  "module": "global_comparative",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://info.worldbank.org/governance/wgi/",
+      "source": "World Bank WGI"
+    },
+    {
+      "type": "module_methodology",
+      "text": "Cross-country comparative analysis uses panel econometric methods: fixed effects, structural breaks (Bai-Perron), convergence tests, cluster analysis (4 fiscal archetypes), and Granger causality.",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "World Bank WGI",
+      "url": "https://info.worldbank.org/governance/wgi/",
+      "access_method": "API",
+      "coverage": "global_205",
+      "period": "1996-2023"
+    }
+  ],
+  "data_columns": [
+    "S024-A",
+    "S024-B",
+    "S024-C",
+    "S024-D",
+    "S024-E",
+    "S024-F",
+    "S024-G",
+    "S024-H"
+  ],
+  "construction": "direct",
+  "units": "index (-2.5 to 2.5)",
+  "methodology_summary": "Governance Panel: World Governance Indicators: voice, stability, effectiveness, regulation, rule of law, corruption. Source: World Bank WGI. Construction: direct. Coverage: global_205, 1996-2023.",
+  "citations": [
+    {
+      "author": "World Bank",
+      "title": "World Bank WGI",
+      "year": 2024,
+      "url": "https://info.worldbank.org/governance/wgi/"
+    }
+  ],
+  "cross_references": [],
+  "notes": ""
+}

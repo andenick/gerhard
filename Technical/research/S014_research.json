@@ -1,0 +1,50 @@
+{
+  "series_id": "S014",
+  "series_name": "Exchange Rate Panel",
+  "module": "global_comparative",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://data.worldbank.org/indicator",
+      "source": "World Bank WDI"
+    },
+    {
+      "type": "module_methodology",
+      "text": "Cross-country comparative analysis uses panel econometric methods: fixed effects, structural breaks (Bai-Perron), convergence tests, cluster analysis (4 fiscal archetypes), and Granger causality.",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "World Bank WDI",
+      "url": "https://data.worldbank.org/indicator",
+      "access_method": "API",
+      "coverage": "global",
+      "period": "1972-2024"
+    }
+  ],
+  "data_columns": [
+    "S014-A",
+    "S014-B",
+    "S014-C",
+    "S014-D",
+    "S014-E",
+    "S014-F",
+    "S014-G",
+    "S014-H"
+  ],
+  "construction": "direct",
+  "units": "mixed (lcu_per_usd, index)",
+  "methodology_summary": "Exchange Rate Panel: Official exchange rate, real effective exchange rate, PPP from WDI. Source: World Bank WDI. Construction: direct. Coverage: global, 1972-2024.",
+  "citations": [
+    {
+      "author": "World Bank",
+      "title": "World Bank WDI",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator"
+    }
+  ],
+  "cross_references": [],
+  "notes": ""
+}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}The History of American Public Finance — {{ site_title }}{% endblock %}
+{% block body %}
+<section class="hero">
+  <div class="container">
+    <h1>The History of American Public Finance</h1>
+    <p class="lead">From 1789 to today — how the federal government raised revenue, decided what
+      to fund, and financed the gap. Each era is told with the data behind it.</p>
+  </div>
+</section>
+<main class="content">
+  <div class="container">
+    <div class="cards">
+      {% for e in eras %}<a class="card" href="/history/{{ e.slug }}"><h3>{{ e.title }}</h3><p>{{ e.period }}</p></a>{% endfor %}
+    </div>
+  </div>
+</main>
+{% endblock %}

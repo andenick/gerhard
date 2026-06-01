@@ -1,0 +1,61 @@
+{
+  "series_id": "S027",
+  "series_name": "Yield Curve Panel",
+  "module": "us_treasury",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://fred.stlouisfed.org/categories/115",
+      "source": "US Treasury / FRED"
+    },
+    {
+      "type": "module_methodology",
+      "text": "US Treasury market analysis covers MSPD (outstanding securities), MTS (monthly flows), yield curves (term structure), auctions (primary market), and monetary aggregates (Fed policy).",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "US Treasury / FRED",
+      "url": "https://fred.stlouisfed.org/categories/115",
+      "access_method": "API",
+      "coverage": "US",
+      "period": "1954-2026"
+    }
+  ],
+  "data_columns": [
+    "S027-A",
+    "S027-B",
+    "S027-C",
+    "S027-D",
+    "S027-E",
+    "S027-F",
+    "S027-G",
+    "S027-H",
+    "S027-I",
+    "S027-J",
+    "S027-K",
+    "S027-L",
+    "S027-M",
+    "S027-N",
+    "S027-O",
+    "S027-P",
+    "S027-Q",
+    "S027-R",
+    "S027-S"
+  ],
+  "construction": "direct",
+  "units": "percent",
+  "methodology_summary": "Yield Curve Panel: Daily US Treasury yield curves (19 maturities, 1954-present). Source: US Treasury / FRED. Construction: direct. Coverage: US, 1954-2026.",
+  "citations": [
+    {
+      "author": "US Department of the Treasury",
+      "title": "US Treasury / FRED",
+      "year": 2024,
+      "url": "https://fred.stlouisfed.org/categories/115"
+    }
+  ],
+  "cross_references": [],
+  "notes": ""
+}

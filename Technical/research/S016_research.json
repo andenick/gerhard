@@ -1,0 +1,56 @@
+{
+  "series_id": "S016",
+  "series_name": "Debt Composition Panel",
+  "module": "public_debt",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://data.worldbank.org/indicator",
+      "source": "World Bank WDI"
+    },
+    {
+      "type": "module_methodology",
+      "text": "Debt sustainability analysis follows the standard debt dynamics equation: d(debt/GDP) = (r-g)(debt/GDP) - primary_balance/GDP. Debt early warning uses Random Forest on historical crisis episodes (AUC=0.99).",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "World Bank WDI",
+      "url": "https://data.worldbank.org/indicator",
+      "access_method": "API",
+      "coverage": "global",
+      "period": "1972-2024"
+    }
+  ],
+  "data_columns": [
+    "S016-A",
+    "S016-B",
+    "S016-C",
+    "S016-D",
+    "S016-E",
+    "S016-F",
+    "S016-G",
+    "S016-H",
+    "S016-I",
+    "S016-J",
+    "S016-K",
+    "S016-L",
+    "S016-M",
+    "S016-N"
+  ],
+  "construction": "direct",
+  "units": "mixed (percent_gdp, percent_gni, percent_exports)",
+  "methodology_summary": "Debt Composition Panel: External vs domestic debt, short vs long term, debt service ratios. Source: World Bank WDI. Construction: direct. Coverage: global, 1972-2024.",
+  "citations": [
+    {
+      "author": "World Bank",
+      "title": "World Bank WDI",
+      "year": 2024,
+      "url": "https://data.worldbank.org/indicator"
+    }
+  ],
+  "cross_references": [],
+  "notes": ""
+}

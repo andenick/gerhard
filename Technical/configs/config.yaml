@@ -1,0 +1,128 @@
+# Gerhard - Global Public Finance Analysis Platform
+# Central configuration file
+project:
+  name: Gerhard
+  version: 2.0.0
+  description: Global Public Finance Analysis Platform
+
+# All paths are relative to project root (resolved at runtime)
+paths:
+  output_data: Output/Data
+  output_pdfs: Output/PDFs
+  technical_data: Technical/data
+  raw_data: Technical/data/raw
+  processed_data: Technical/data/processed
+  countries: Countries
+  docs: Technical/docs
+  configs: Technical/configs
+
+# Data source configuration
+data_sources:
+  worldbank:
+    enabled: true
+    indicator: GC.TAX.TOTL.GD.ZS
+    raw_dir: Technical/data/raw/worldbank
+  imf:
+    enabled: true
+    raw_dir: Technical/data/raw/imf
+    note: May require manual download from IMF DataMapper
+  oecd:
+    enabled: true
+    raw_dir: Technical/data/raw/oecd
+    note: May require manual download from OECD.Stat
+  eurostat:
+    enabled: true
+    raw_dir: Technical/data/raw/eurostat
+  wid:
+    enabled: true
+    raw_dir: Technical/data/raw/wid
+  us_dina:
+    enabled: true
+    raw_dir: Technical/data/raw/us_dina
+
+# Country quality tiers
+quality_tiers:
+  tier1:
+    - US
+    - GB
+    - DE
+    - FR
+    - JP
+    - CA
+    - AU
+    - IT
+    - ES
+    - NL
+    - SE
+    - NO
+    - DK
+    - FI
+    - BE
+    - AT
+    - CH
+    - IE
+    - NZ
+    - KR
+    - IL
+    - SG
+    - MX
+    - BR
+    - IN
+    - CN
+    - ZA
+    - RU
+    - TR
+    - PL
+    - CZ
+    - CL
+    - CO
+  tier2:
+    - AR
+    - PE
+    - EG
+    - NG
+    - KE
+    - GH
+    - TZ
+    - ET
+    - PK
+    - BD
+    - VN
+    - TH
+    - MY
+    - PH
+    - ID
+    - UA
+    - RO
+    - HU
+    - HR
+    - BG
+    - SK
+    - LT
+    - LV
+    - EE
+    - SI
+    - PT
+    - GR
+    - IS
+    - LU
+
+# Visualization settings
+visualization:
+  dpi: 300
+  style: seaborn-v0_8-whitegrid
+  figsize_default: [12, 8]
+  color_palette: colorblind
+
+# Pipeline framework configuration
+pipeline:
+  default_timeout: 120
+  max_parallel_workers: 4
+  strict_validation: false
+  stages:
+    L: {parallel: true, timeout: 300, skippable: true}
+    P: {parallel: true, timeout: 300}
+    E: {parallel: true, timeout: 60}
+    A: {parallel: true, timeout: 120}
+    V: {parallel: true, timeout: 120}
+    R: {parallel: false, timeout: 300}

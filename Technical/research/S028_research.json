@@ -1,0 +1,55 @@
+{
+  "series_id": "S028",
+  "series_name": "Treasury Auction Panel",
+  "module": "us_treasury",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://treasurydirect.gov/auctions/auction-query/results/",
+      "source": "US Treasury Auction Results"
+    },
+    {
+      "type": "module_methodology",
+      "text": "US Treasury market analysis covers MSPD (outstanding securities), MTS (monthly flows), yield curves (term structure), auctions (primary market), and monetary aggregates (Fed policy).",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "US Treasury Auction Results",
+      "url": "https://treasurydirect.gov/auctions/auction-query/results/",
+      "access_method": "API",
+      "coverage": "US",
+      "period": "1979-2026"
+    }
+  ],
+  "data_columns": [
+    "S028-A",
+    "S028-B",
+    "S028-C",
+    "S028-D",
+    "S028-E",
+    "S028-F",
+    "S028-G",
+    "S028-H",
+    "S028-I",
+    "S028-J",
+    "S028-K",
+    "S028-L",
+    "S028-M"
+  ],
+  "construction": "direct",
+  "units": "mixed (percent, ratio, billions_usd)",
+  "methodology_summary": "Treasury Auction Panel: US Treasury auction results — bid-to-cover, high yield, tail by security type. Source: US Treasury Auction Results. Construction: direct. Coverage: US, 1979-2026.",
+  "citations": [
+    {
+      "author": "US Department of the Treasury",
+      "title": "US Treasury Auction Results",
+      "year": 2024,
+      "url": "https://treasurydirect.gov/auctions/auction-query/results/"
+    }
+  ],
+  "cross_references": [],
+  "notes": ""
+}

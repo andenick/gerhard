@@ -1,0 +1,54 @@
+{
+  "series_id": "S019",
+  "series_name": "Aggregates Panel",
+  "module": "global_comparative",
+  "created": "2026-05-12",
+  "methodology_description": [
+    {
+      "type": "source_description",
+      "text": "https://data.worldbank.org",
+      "source": "World Bank WDI (aggregated)"
+    },
+    {
+      "type": "module_methodology",
+      "text": "Cross-country comparative analysis uses panel econometric methods: fixed effects, structural breaks (Bai-Perron), convergence tests, cluster analysis (4 fiscal archetypes), and Granger causality.",
+      "source": "Gerhard project methodology"
+    }
+  ],
+  "source_citation": [
+    {
+      "source": "World Bank WDI (aggregated)",
+      "url": "https://data.worldbank.org",
+      "access_method": "API",
+      "coverage": "regional_aggregates",
+      "period": "1972-2024"
+    }
+  ],
+  "data_columns": [
+    "S019-A",
+    "S019-B",
+    "S019-C",
+    "S019-D",
+    "S019-E",
+    "S019-F",
+    "S019-G",
+    "S019-H",
+    "S019-I",
+    "S019-J"
+  ],
+  "construction": "composite",
+  "units": "mixed",
+  "methodology_summary": "Aggregates Panel: Regional and income-group aggregated fiscal indicators. Source: World Bank WDI (aggregated). Construction: composite. Coverage: regional_aggregates, 1972-2024.",
+  "citations": [
+    {
+      "author": "World Bank",
+      "title": "World Bank WDI (aggregated)",
+      "year": 2024,
+      "url": "https://data.worldbank.org"
+    }
+  ],
+  "cross_references": [
+    "S006"
+  ],
+  "notes": ""
+}
