@@ -30,7 +30,7 @@ This project provides a country-by-country tax analysis dataset covering 202 cou
 
 **Global Average:** 15.3% of GDP
 **Global Median:** 15.8% of GDP
-**Range:** 0% to 44.4% of GDP
+**Range:** 0% to 33.0% of GDP
 
 ### Top 10 Highest Tax Countries
 
@@ -47,10 +47,10 @@ This project provides a country-by-country tax analysis dataset covering 202 cou
 
 **Pattern:** Scandinavian welfare states and some small economies lead in tax collection.
 
-> **Note:** The dataset range maximum (44.4% of GDP, above) exceeds the highest
-> value in this top-10 list (33.0%), so this ranking does not reflect every entity
-> in the panel. It should be regenerated directly from the source data; treat the
-> ordering above as indicative.
+> **Note:** The range maximum above (33.0% of GDP) matches the highest entity in
+> this ranking (Namibia), consistent with the dataset shown. An earlier draft
+> stated a 44.4% maximum that no listed entity supported; it has been reconciled
+> to the actual panel maximum. Regenerate directly from source data when updating.
 
 ### Top 10 Lowest Tax Countries
 
