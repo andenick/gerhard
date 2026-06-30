@@ -62,7 +62,3 @@ Verified via  — 15/15 tests pass.
 ## Known Issues
 
 None documented at initialization.
-
----
-
-*DPR generated 2026-05-11 during Anu Framework integration (Stage 3: Ingestion)*

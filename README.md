@@ -74,6 +74,12 @@ python -m pytest Technical/tests/ -v
 
 ## Project Structure
 
+> **Note:** This is a **code-only** release. The data directories below (`Output/`,
+> `Countries/`, `Inputs/`, and `data/raw`–`data/processed`) and the generated
+> `MASTER_INDEX.md` are **not** included in this repository — they are produced by
+> running the pipeline against your own `DATA_ROOT`/`OUTPUT_ROOT` (see `data/MANIFEST.md`).
+> The tree below documents the full pipeline layout for reference.
+
 ```
 Gerhard/
 ├── Output/                     # Deliverables

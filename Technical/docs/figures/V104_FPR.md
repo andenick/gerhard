@@ -23,7 +23,3 @@ Data read from panel Excel files produced by corresponding P## scripts.
 ## Output Location
 
  or 
-
----
-
-*FPR generated 2026-05-12 during Anu Framework integration*

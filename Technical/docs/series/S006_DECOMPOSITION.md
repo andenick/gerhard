@@ -63,7 +63,3 @@ Where:
 - Debt = Central government debt (% GDP) from World Bank indicator GC.DOD.TOTL.GD.ZS
 
 The panel merges these three domains via left-join on (country_code, year), preserving all tax-panel rows even where expenditure or debt data is missing.
-
----
-
-*Decomposition created 2026-05-12 during Anu Framework integration*

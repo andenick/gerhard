@@ -5,7 +5,7 @@ section: about
 
 This site is a read-only window onto the Gerhard public-finance data platform. Every chart
 is generated on the server from a normalized data cache, and every figure is downloadable
-in CSV, Excel, JSON, and Parquet. Nothing shown here is hand-entered or estimated at the
+in CSV, Excel, and Parquet. Nothing shown here is hand-entered or estimated at the
 website layer.
 
 ## Data sources
@@ -25,7 +25,7 @@ website layer.
 
 ## How the data is built
 
-The underlying data is constructed by the Gerhard pipeline under the **Anu Framework**,
+The underlying data is constructed by the Gerhard data pipeline,
 which enforces a single source of truth (a series registry), full provenance for every
 series, and a strict no-synthetic-data rule: if a value cannot be traced to a published
 source or a documented analytical method, it is left missing rather than fabricated. The

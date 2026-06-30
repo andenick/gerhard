@@ -36,7 +36,3 @@ graph TD
     
     style S019 fill:#f9f,stroke:#333,stroke-width:3px
 ```
-
----
-
-*Decomposition created 2026-05-12 during Anu Framework integration*
